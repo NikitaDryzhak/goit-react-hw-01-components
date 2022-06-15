@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function StatisticItems({ label, percentage }) {
   return (
     <li style={{ backgroundColor: randomColor() }} className="item">
@@ -13,5 +15,10 @@ function randomColor() {
   function random(number) {
     return Math.floor(Math.random() * number);
   }
-  return "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  return 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
 }
+
+StatisticItems.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};

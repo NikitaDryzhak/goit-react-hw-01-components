@@ -1,4 +1,6 @@
-import "./TransactionHistory.css";
+import PropTypes from 'prop-types';
+
+import './TransactionHistory.css';
 
 function Transaction({ type, amount, currency }) {
   return (
@@ -11,3 +13,9 @@ function Transaction({ type, amount, currency }) {
 }
 
 export default Transaction;
+
+Transaction.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};
